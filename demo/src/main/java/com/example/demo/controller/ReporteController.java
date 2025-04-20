@@ -1,7 +1,7 @@
 package com.example.demo.controller;
 
+import com.example.demo.dto.ReporteDTO;
 import com.example.demo.dto.UsuarioDTO;
-import com.example.demo.model.Usuario;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,13 +11,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/usuarios")
-public class UsuarioController {
-
+@RequestMapping("/reportes")
+public class ReporteController {
     @PostMapping
-    public ResponseEntity<UsuarioDTO> crearUsuario(@Valid @RequestBody UsuarioDTO usuarioDTO) {
+    public ResponseEntity<ReporteDTO> crearReporte(@Valid @RequestBody ReporteDTO reporteDTO) {
         //Logica para crear usuario
-        return ResponseEntity.status(HttpStatus.CREATED).body(usuarioDTO);
+        return ResponseEntity.status(HttpStatus.CREATED).body(reporteDTO);
     }
 }
-
