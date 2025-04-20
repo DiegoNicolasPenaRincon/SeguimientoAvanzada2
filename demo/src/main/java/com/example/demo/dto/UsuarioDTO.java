@@ -10,7 +10,7 @@ public record UsuarioDTO(
         @Email(message = "Debe ser un email válido")
         String correo,
         @NotBlank(message = "El campo es requerido")
-        @Pattern(regexp = "^(?=.*\\\\d)(?=.*[a-z])(?=.*[A-Z]).*$",message = "Debe contener a")
+        //@Pattern(regexp = "^(?=.*\\\\d)(?=.*[a-z])(?=.*[A-Z]).*$",message = "Debe contener a")
         @Size(min = 8,message = "La longitud mínima es 8")
         String contrasenia,
         @NotBlank(message = "El campo es requerido")
