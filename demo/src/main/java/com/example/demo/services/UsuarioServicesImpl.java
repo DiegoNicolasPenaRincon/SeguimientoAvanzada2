@@ -2,13 +2,18 @@ package com.example.demo.services;
 
 import com.example.demo.dto.UsuarioDTO;
 import com.example.demo.model.Usuario;
+import lombok.RequiredArgsConstructor;
+import mapper.UsuarioMapper;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 
+@RequiredArgsConstructor
 @Service
 public class UsuarioServicesImpl implements UsuarioServices {
+
+    private final UsuarioMapper usuariomapper;
 
     @Override
     public Usuario crearUsuario(UsuarioDTO usuarioDTO) {
